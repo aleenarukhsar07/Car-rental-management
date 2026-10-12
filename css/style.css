@@ -1,0 +1,1942 @@
+/* =========================================================
+   DRIVE EASE - CAR RENTAL WEBSITE
+   COMPLETE STYLE SHEET
+   ========================================================= */
+
+
+/* =========================
+   GOOGLE FONT
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   VARIABLES
+   ========================= */
+
+:root {
+    --primary: #f97316;
+    --primary-dark: #ea580c;
+    --primary-light: #fff7ed;
+
+    --dark: #111827;
+    --dark-2: #1f2937;
+
+    --text: #374151;
+    --text-light: #6b7280;
+
+    --white: #ffffff;
+    --light: #f9fafb;
+    --light-2: #f3f4f6;
+
+    --border: #e5e7eb;
+
+    --success: #16a34a;
+
+    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.06);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+
+    --radius: 14px;
+}
+
+
+/* =========================
+   CONTAINER
+   ========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: transparent;
+}
+
+.navbar {
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.logo i {
+    color: var(--primary);
+    font-size: 27px;
+}
+
+.logo span span {
+    color: var(--primary);
+}
+
+
+/* Navigation */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-menu a {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--white);
+}
+
+.nav-menu a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--primary);
+}
+
+
+/* Login Button */
+
+.login-btn {
+    padding: 11px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+
+/* Mobile Menu Button */
+
+.menu-btn {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: var(--white);
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO / LANDING SECTION
+   ========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    color: var(--white);
+
+    background: #111827;
+}
+
+
+/* =========================
+   HERO BACKGROUND IMAGE
+   ========================= */
+
+.hero-background {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../img/back.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    transform: scale(1.03);
+
+    z-index: 1;
+}
+
+
+/* Dark overlay */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 12, 20, 0.90) 0%,
+            rgba(7, 12, 20, 0.70) 40%,
+            rgba(7, 12, 20, 0.35) 75%,
+            rgba(7, 12, 20, 0.55) 100%
+        );
+
+    z-index: 2;
+}
+
+
+/* Additional orange glow */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    bottom: -250px;
+
+    background: rgba(249, 115, 22, 0.25);
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    z-index: 3;
+}
+
+
+/* Hero content */
+
+.hero-content {
+    position: relative;
+
+    z-index: 10;
+
+    min-height: 720px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    padding-top: 70px;
+}
+
+
+/* =========================
+   HERO TEXT
+   ========================= */
+
+.hero-text {
+    max-width: 600px;
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Hero tag */
+
+.hero-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 15px;
+
+    margin-bottom: 22px;
+
+    border-radius: 50px;
+
+    background: rgba(249, 115, 22, 0.15);
+
+    border: 1px solid rgba(249, 115, 22, 0.4);
+
+    color: #fed7aa;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.hero-tag i {
+    color: var(--primary);
+}
+
+
+/* Hero heading */
+
+.hero-text h1 {
+    font-size: clamp(44px, 5vw, 70px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 24px;
+}
+
+.hero-text h1 span {
+    display: block;
+
+    color: var(--primary);
+}
+
+
+/* Hero paragraph */
+
+.hero-text > p {
+    max-width: 540px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   HERO BUTTONS
+   ========================= */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Primary button */
+
+.primary-btn {
+    background: var(--primary);
+
+    color: var(--white);
+
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3);
+}
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 15px 30px rgba(249, 115, 22, 0.4);
+}
+
+
+/* Secondary button */
+
+.secondary-btn {
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    color: var(--white);
+
+    backdrop-filter: blur(5px);
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO RIGHT SIDE
+   ========================= */
+
+.hero-image {
+    position: relative;
+
+    height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 5;
+}
+
+
+/* Card */
+
+.hero-car-card {
+    position: relative;
+
+    width: 100%;
+    height: 460px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35),
+        inset 0 0 60px rgba(255, 255, 255, 0.03);
+
+    backdrop-filter: blur(3px);
+}
+
+
+/* Decorative orange glow */
+
+.hero-car-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(249, 115, 22, 0.20);
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    z-index: 2;
+}
+
+
+/* Bottom shadow */
+
+.hero-car-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 10%;
+    right: 10%;
+    bottom: 45px;
+
+    height: 50px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    border-radius: 50%;
+
+    filter: blur(25px);
+
+    z-index: 2;
+}
+
+
+/* =========================
+   FLOATING INFO CARD
+   ========================= */
+
+.car-floating-info {
+    position: absolute;
+
+    left: 25px;
+    bottom: 25px;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 18px;
+
+    min-width: 230px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    color: var(--dark);
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* Floating icon */
+
+.car-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    font-size: 18px;
+}
+
+.car-floating-info strong {
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 2px;
+}
+
+.car-floating-info p {
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BOOKING SECTION
+   ========================================================= */
+
+.booking-section {
+    position: relative;
+
+    margin-top: -70px;
+
+    z-index: 20;
+}
+
+.booking-box {
+    background: var(--white);
+
+    border-radius: 18px;
+
+    padding: 28px 30px;
+
+    box-shadow: var(--shadow-lg);
+
+    border: 1px solid var(--border);
+}
+
+
+/* Booking title */
+
+.booking-title {
+    margin-bottom: 22px;
+}
+
+.booking-title h2 {
+    color: var(--dark);
+
+    font-size: 22px;
+
+    margin-bottom: 4px;
+}
+
+.booking-title p {
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+
+/* Booking form */
+
+.booking-form {
+    display: grid;
+
+    grid-template-columns: 1.2fr 1fr 1fr auto;
+
+    gap: 16px;
+
+    align-items: end;
+}
+
+
+/* Form group */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.form-group label i {
+    color: var(--primary);
+}
+
+
+/* Inputs */
+
+.form-group select,
+.form-group input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: var(--light);
+
+    color: var(--text);
+
+    outline: none;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: var(--primary);
+
+    background: var(--white);
+
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+
+/* Search button */
+
+.search-btn {
+    height: 48px;
+
+    padding: 0 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.search-btn:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+   ========================================================= */
+
+.featured-section,
+.why-us,
+.how-it-works,
+.reviews-section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 45px;
+}
+
+.section-heading.centered {
+    display: block;
+
+    text-align: center;
+
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 55px;
+}
+
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: var(--primary);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    color: var(--dark);
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    max-width: 550px;
+}
+
+.section-heading.centered p {
+    margin: 0 auto;
+}
+
+
+/* View all */
+
+.view-all {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.view-all:hover {
+    color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   FEATURED CARS
+   ========================================================= */
+
+.featured-section {
+    background: var(--white);
+}
+
+.cars-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Car card */
+
+.car-card {
+    background: linear-gradient(145deg, #ffffff, #fff7ed);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: all 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* Car image */
+
+.car-image {
+    position: relative;
+
+    height: 230px;
+
+    background: var(--light-2);
+
+    overflow: hidden;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.06);
+}
+
+
+/* Available badge */
+
+.available {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 6px 10px;
+
+    background: #dcfce7;
+
+    color: var(--success);
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* Car content */
+
+.car-content {
+    padding: 20px;
+}
+
+
+/* Car title */
+
+.car-title {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.car-title h3 {
+    color: var(--dark);
+
+    font-size: 17px;
+
+    margin-bottom: 3px;
+}
+
+.car-title p {
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+/* Rating */
+
+.rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: var(--dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.rating i {
+    color: #f59e0b;
+}
+
+
+/* Specs */
+
+.car-specs {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.car-specs span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+}
+
+.car-specs i {
+    color: var(--primary);
+
+    font-size: 11px;
+}
+
+
+/* Bottom */
+
+.car-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding-top: 18px;
+}
+
+.price strong {
+    color: var(--dark);
+
+    font-size: 18px;
+}
+
+.price span {
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+
+/* Rent button */
+
+.rent-btn {
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.rent-btn:hover {
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+
+/* =========================================================
+   WHY CHOOSE US
+   ========================================================= */
+
+.why-us {
+    background: var(--light);
+}
+
+.features-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 30px 22px;
+
+    background: linear-gradient(145deg, #ffffff, #fff1e6);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 12px;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    font-size: 23px;
+}
+
+.feature-card h3 {
+    color: var(--dark);
+
+    font-size: 16px;
+
+    margin-bottom: 9px;
+}
+
+.feature-card p {
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+   ========================================================= */
+
+.how-it-works {
+    background: var(--white);
+}
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+
+    position: relative;
+}
+
+.step {
+    position: relative;
+
+    text-align: center;
+
+    padding: 10px;
+}
+
+
+/* Step number */
+
+.step-number {
+    position: absolute;
+
+    top: -5px;
+    right: 20px;
+
+    color: rgba(249, 115, 22, 0.08);
+
+    font-size: 55px;
+
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+
+/* Step icon */
+
+.step-icon {
+    position: relative;
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 22px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    font-size: 25px;
+
+    box-shadow: 0 12px 25px rgba(249, 115, 22, 0.25);
+}
+
+.step h3 {
+    color: var(--dark);
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+.step p {
+    max-width: 280px;
+
+    margin: 0 auto;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   REVIEWS
+   ========================================================= */
+
+.reviews-section {
+    background: linear-gradient(145deg, #ffffff, #f3f4ff);
+}
+
+.reviews-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.review-card {
+    padding: 28px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.stars {
+    color: #f59e0b;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+.review-card > p {
+    color: var(--text);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* Customer */
+
+.customer {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.customer-avatar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+.customer h4 {
+    color: var(--dark);
+
+    font-size: 13px;
+
+    margin-bottom: 2px;
+}
+
+.customer span {
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CALL TO ACTION
+   ========================================================= */
+
+.cta-section {
+    padding: 70px 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            #111827,
+            #1f2937
+        );
+
+    color: var(--white);
+}
+
+.cta-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.cta-content .section-label {
+    color: var(--primary);
+}
+
+.cta-content h2 {
+    max-width: 600px;
+
+    font-size: 34px;
+
+    line-height: 1.2;
+
+    margin-bottom: 10px;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 13px;
+}
+
+
+/* CTA button */
+
+.cta-btn {
+    flex-shrink: 0;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    padding: 14px 25px;
+}
+
+.cta-btn:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    background: #0b1120;
+
+    color: var(--white);
+
+    padding-top: 70px;
+}
+
+
+/* Footer grid */
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+
+    gap: 50px;
+
+    padding-bottom: 50px;
+}
+
+
+/* Footer logo */
+
+.footer-logo {
+    margin-bottom: 18px;
+}
+
+.footer-column > p {
+    max-width: 280px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* Footer headings */
+
+.footer-column h3 {
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Footer links */
+
+.footer-column > a:not(.logo) {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 12px;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s ease;
+}
+
+.footer-column > a:not(.logo):hover {
+    color: var(--primary);
+
+    padding-left: 4px;
+}
+
+
+/* Contact paragraphs */
+
+.footer-column > p {
+    margin-bottom: 12px;
+}
+
+.footer-column > p i {
+    width: 20px;
+
+    color: var(--primary);
+
+    margin-right: 5px;
+}
+
+
+/* Social links */
+
+.social-links {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--primary);
+
+    color: var(--white);
+
+    transform: translateY(-3px);
+}
+
+
+/* Footer bottom */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding: 20px 0;
+}
+
+.footer-bottom .container {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 11px;
+}
+
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 11px;
+
+    margin-left: 20px;
+
+    transition: 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 120px;
+
+        gap: 35px;
+    }
+
+    .hero-text {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+    .hero-text > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        height: 380px;
+
+        max-width: 650px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+    .hero-car-card {
+        height: 350px;
+    }
+
+    .booking-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .cars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* Header */
+
+    .navbar {
+        height: 75px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 850px;
+    }
+
+    .hero-content {
+        min-height: 850px;
+
+        padding-top: 100px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h1 {
+        font-size: 43px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero-text > p {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        height: 320px;
+    }
+
+    .hero-car-card {
+        height: 300px;
+
+        border-radius: 18px;
+    }
+
+    .car-floating-info {
+        left: 15px;
+        bottom: 15px;
+
+        min-width: auto;
+
+        padding: 10px 13px;
+    }
+
+
+    /* Booking */
+
+    .booking-section {
+        margin-top: -40px;
+    }
+
+    .booking-box {
+        padding: 22px;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Sections */
+
+    .featured-section,
+    .why-us,
+    .how-it-works,
+    .reviews-section {
+        padding: 75px 0;
+    }
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-bottom: 35px;
+    }
+
+    .section-heading.centered {
+        align-items: center;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+
+    /* Cars */
+
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Features */
+
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /* Steps */
+
+    .steps {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    /* Reviews */
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CTA */
+
+    .cta-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .cta-content h2 {
+        font-size: 28px;
+    }
+
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .logo i {
+        font-size: 23px;
+    }
+
+
+    .hero {
+        min-height: 800px;
+    }
+
+    .hero-content {
+        min-height: 800px;
+
+        padding-top: 95px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text > p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-image {
+        height: 270px;
+    }
+
+    .hero-car-card {
+        height: 255px;
+    }
+
+    .car-floating-info {
+        transform: scale(0.9);
+
+        transform-origin: left bottom;
+    }
+
+
+    /* Booking */
+
+    .booking-box {
+        padding: 18px;
+    }
+
+    .booking-title h2 {
+        font-size: 19px;
+    }
+
+
+    /* Features */
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom a {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+}
