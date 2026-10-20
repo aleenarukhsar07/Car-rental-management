@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DriveEase | Car Rental Management System</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<section class="featured-section">
+
+    <h1 class="section-title">Featured Cars</h1>
+
+    <div class="cars-grid">
+
+        <!-- Car 1 -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=900&q=85" alt="Toyota Corolla">
+                <span class="available">Available</span>
+            </div>
+            <div class="car-details">
+                <div class="car-title-row">
+                    <h3 class="car-title">Toyota Corolla</h3>
+                    <span class="rating"><i class="fa-solid fa-star"></i>4.9</span>
+                </div>
+                <p class="car-type">Sedan</p>
+                <div class="car-features">
+                    <span><i class="fa-solid fa-user"></i>5 Seats</span>
+                    <span><i class="fa-solid fa-gears"></i>Automatic</span>
+                    <span><i class="fa-solid fa-gas-pump"></i>Petrol</span>
+                </div>
+                <div class="car-footer">
+                    <div class="price">Rs. 8,000 <small>/ day</small></div>
+                    <a href="booking.html?car=Toyota%20Corolla" class="rent-btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car 2 -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1606611013016-969c19ba27bb?auto=format&fit=crop&w=900&q=85" alt="Honda Civic">
+                <span class="available">Available</span>
+            </div>
+            <div class="car-details">
+                <div class="car-title-row">
+                    <h3 class="car-title">Honda Civic</h3>
+                    <span class="rating"><i class="fa-solid fa-star"></i>4.8</span>
+                </div>
+                <p class="car-type">Luxury Sedan</p>
+                <div class="car-features">
+                    <span><i class="fa-solid fa-user"></i>5 Seats</span>
+                    <span><i class="fa-solid fa-gears"></i>Automatic</span>
+                    <span><i class="fa-solid fa-gas-pump"></i>Petrol</span>
+                </div>
+                <div class="car-footer">
+                    <div class="price">Rs. 10,000 <small>/ day</small></div>
+                    <a href="booking.html?car=Honda%20Civic" class="rent-btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car 3 -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=85" alt="Kia Sportage">
+                <span class="available">Available</span>
+            </div>
+            <div class="car-details">
+                <div class="car-title-row">
+                    <h3 class="car-title">Kia Sportage</h3>
+                    <span class="rating"><i class="fa-solid fa-star"></i>4.9</span>
+                </div>
+                <p class="car-type">SUV</p>
+                <div class="car-features">
+                    <span><i class="fa-solid fa-user"></i>5 Seats</span>
+                    <span><i class="fa-solid fa-gears"></i>Automatic</span>
+                    <span><i class="fa-solid fa-gas-pump"></i>Petrol</span>
+                </div>
+                <div class="car-footer">
+                    <div class="price">Rs. 12,000 <small>/ day</small></div>
+                    <a href="booking.html?car=Kia%20Sportage" class="rent-btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car 4 -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=900&q=85" alt="Honda City">
+                <span class="available">Available</span>
+            </div>
+            <div class="car-details">
+                <div class="car-title-row">
+                    <h3 class="car-title">Honda City</h3>
+                    <span class="rating"><i class="fa-solid fa-star"></i>4.8</span>
+                </div>
+                <p class="car-type">Sedan</p>
+                <div class="car-features">
+                    <span><i class="fa-solid fa-user"></i>5 Seats</span>
+                    <span><i class="fa-solid fa-gears"></i>Automatic</span>
+                    <span><i class="fa-solid fa-gas-pump"></i>Petrol</span>
+                </div>
+                <div class="car-footer">
+                    <div class="price">Rs. 7,500 <small>/ day</small></div>
+                    <a href="booking.html?car=Honda%20City" class="rent-btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car 5 -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=900&q=85" alt="Hyundai Tucson">
+                <span class="available">Available</span>
+            </div>
+            <div class="car-details">
+                <div class="car-title-row">
+                    <h3 class="car-title">Hyundai Tucson</h3>
+                    <span class="rating"><i class="fa-solid fa-star"></i>4.7</span>
+                </div>
+                <p class="car-type">SUV</p>
+                <div class="car-features">
+                    <span><i class="fa-solid fa-user"></i>5 Seats</span>
+                    <span><i class="fa-solid fa-gears"></i>Automatic</span>
+                    <span><i class="fa-solid fa-gas-pump"></i>Petrol</span>
+                </div>
+                <div class="car-footer">
+                    <div class="price">Rs. 13,000 <small>/ day</small></div>
+                    <a href="booking.html?car=Hyundai%20Tucson" class="rent-btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car 6 -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=85" alt="Suzuki Alto">
+                <span class="available">Available</span>
+            </div>
+            <div class="car-details">
+                <div class="car-title-row">
+                    <h3 class="car-title">Suzuki Alto</h3>
+                    <span class="rating"><i class="fa-solid fa-star"></i>4.6</span>
+                </div>
+                <p class="car-type">Hatchback</p>
+                <div class="car-features">
+                    <span><i class="fa-solid fa-user"></i>4 Seats</span>
+                    <span><i class="fa-solid fa-gears"></i>Automatic</span>
+                    <span><i class="fa-solid fa-gas-pump"></i>Petrol</span>
+                </div>
+                <div class="car-footer">
+                    <div class="price">Rs. 4,000 <small>/ day</small></div>
+                    <a href="booking.html?car=Suzuki%20Alto" class="rent-btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car 7 -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=85" alt="Suzuki Cultus">
+                <span class="available">Available</span>
+            </div>
+            <div class="car-details">
+                <div class="car-title-row">
+                    <h3 class="car-title">Suzuki Cultus</h3>
+                    <span class="rating"><i class="fa-solid fa-star"></i>4.7</span>
+                </div>
+                <p class="car-type">Hatchback</p>
+                <div class="car-features">
+                    <span><i class="fa-solid fa-user"></i>5 Seats</span>
+                    <span><i class="fa-solid fa-gears"></i>Automatic</span>
+                    <span><i class="fa-solid fa-gas-pump"></i>Petrol</span>
+                </div>
+                <div class="car-footer">
+                    <div class="price">Rs. 5,000 <small>/ day</small></div>
+                    <a href="booking.html?car=Suzuki%20Cultus" class="rent-btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car 8 -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=85" alt="Toyota Yaris">
+                <span class="available">Available</span>
+            </div>
+            <div class="car-details">
+                <div class="car-title-row">
+                    <h3 class="car-title">Toyota Yaris</h3>
+                    <span class="rating"><i class="fa-solid fa-star"></i>4.7</span>
+                </div>
+                <p class="car-type">Sedan</p>
+                <div class="car-features">
+                    <span><i class="fa-solid fa-user"></i>5 Seats</span>
+                    <span><i class="fa-solid fa-gears"></i>Automatic</span>
+                    <span><i class="fa-solid fa-gas-pump"></i>Petrol</span>
+                </div>
+                <div class="car-footer">
+                    <div class="price">Rs. 6,500 <small>/ day</small></div>
+                    <a href="booking.html?car=Toyota%20Yaris" class="rent-btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car 9 -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-151 SUV?auto=format&fit=crop&w=900&q=85"
+                     alt="Toyota Fortuner"
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=85'">
+                <span class="available">Available</span>
+            </div>
+            <div class="car-details">
+                <div class="car-title-row">
+                    <h3 class="car-title">Toyota Fortuner</h3>
+                    <span class="rating"><i class="fa-solid fa-star"></i>4.9</span>
+                </div>
+                <p class="car-type">Premium SUV</p>
+                <div class="car-features">
+                    <span><i class="fa-solid fa-user"></i>7 Seats</span>
+                    <span><i class="fa-solid fa-gears"></i>Automatic</span>
+                    <span><i class="fa-solid fa-gas-pump"></i>Petrol</span>
+                </div>
+                <div class="car-footer">
+                    <div class="price">Rs. 22,000 <small>/ day</small></div>
+                    <a href="booking.html?car=Toyota%20Fortuner" class="rent-btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car 10 -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=900&q=85" alt="MG HS">
+                <span class="available">Available</span>
+            </div>
+            <div class="car-details">
+                <div class="car-title-row">
+                    <h3 class="car-title">MG HS</h3>
+                    <span class="rating"><i class="fa-solid fa-star"></i>4.8</span>
+                </div>
+                <p class="car-type">SUV</p>
+                <div class="car-features">
+                    <span><i class="fa-solid fa-user"></i>5 Seats</span>
+                    <span><i class="fa-solid fa-gears"></i>Automatic</span>
+                    <span><i class="fa-solid fa-gas-pump"></i>Petrol</span>
+                </div>
+                <div class="car-footer">
+                    <div class="price">Rs. 16,000 <small>/ day</small></div>
+                    <a href="booking.html?car=MG%20HS" class="rent-btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car 11 -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=900&q=85" alt="BMW 5 Series">
+                <span class="available">Available</span>
+            </div>
+            <div class="car-details">
+                <div class="car-title-row">
+                    <h3 class="car-title">BMW 5 Series</h3>
+                    <span class="rating"><i class="fa-solid fa-star"></i>4.9</span>
+                </div>
+                <p class="car-type">Luxury Sedan</p>
+                <div class="car-features">
+                    <span><i class="fa-solid fa-user"></i>5 Seats</span>
+                    <span><i class="fa-solid fa-gears"></i>Automatic</span>
+                    <span><i class="fa-solid fa-gas-pump"></i>Petrol</span>
+                </div>
+                <div class="car-footer">
+                    <div class="price">Rs. 30,000 <small>/ day</small></div>
+                    <a href="booking.html?car=BMW%205%20Series" class="rent-btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car 12 -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1618843479618-39b4f6b9a7e4?auto=format&fit=crop&w=900&q=85" alt="Mercedes-Benz">
+                <span class="available">Available</span>
+            </div>
+            <div class="car-details">
+                <div class="car-title-row">
+                    <h3 class="car-title">Mercedes-Benz</h3>
+                    <span class="rating"><i class="fa-solid fa-star"></i>5.0</span>
+                </div>
+                <p class="car-type">Luxury Sedan</p>
+                <div class="car-features">
+                    <span><i class="fa-solid fa-user"></i>5 Seats</span>
+                    <span><i class="fa-solid fa-gears"></i>Automatic</span>
+                    <span><i class="fa-solid fa-gas-pump"></i>Petrol</span>
+                </div>
+                <div class="car-footer">
+                    <div class="price">Rs. 25,000 <small>/ day</small></div>
+                    <a href="booking.html?car=Mercedes-Benz" class="rent-btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <!-- About -->
+            <div class="footer-column">
+
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fa-solid fa-car"></i>
+                    <span>Drive<span>Ease</span></span>
+                </a>
+
+                <p>
+                    Your trusted partner for comfortable,
+                    reliable and affordable car rentals.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="cars.html">Our Cars</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <!-- Services -->
+            <div class="footer-column">
+
+                <h3>Services</h3>
+
+                <a href="cars.html">Car Rental</a>
+                <a href="#">Airport Pickup</a>
+                <a href="#">Long Term Rental</a>
+                <a href="#">Corporate Rental</a>
+
+            </div>
+
+
+            <!-- Contact -->
+            <div class="footer-column">
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Lahore, Pakistan
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +92 300 1234567
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@driveease.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 DriveEase. All Rights Reserved.
+                </p>
+
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
