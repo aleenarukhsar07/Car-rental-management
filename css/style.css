@@ -1946,11 +1946,7 @@ img {
 
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
     font-family: 'Inter', sans-serif;
@@ -2154,7 +2150,7 @@ body {
 }
 
 /*------about-----*/
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+*{font-family:'Inter',sans-serif}
 :root{--orange:#FF6B00;--dark:#16263D;--gray:#5B6B7F;--light:#F8F9FB}
 body{background:#fff;color:var(--dark)}
 
@@ -2438,3 +2434,255 @@ body {
                 gap: 0;
             }
         }
+
+/* =========================================================
+   DRIVE EASE - LIGHT GREY, NAVY & ORANGE THEME OVERRIDES
+   ========================================================= */
+
+:root {
+    --dark: #243247;
+    --dark-2: #34445a;
+    --text: #344256;
+    --text-light: #68778b;
+    --white: #ffffff;
+    --light: #f4f6f9;
+    --light-2: #e9edf2;
+    --border: #dce2ea;
+    --primary-light: #fff1e7;
+    --shadow-sm: 0 8px 24px rgba(35, 48, 67, 0.07);
+    --shadow: 0 12px 32px rgba(35, 48, 67, 0.10);
+    --shadow-lg: 0 20px 45px rgba(35, 48, 67, 0.14);
+}
+
+/* Soft grey page background */
+html,
+body {
+    background: #edf1f5;
+    color: #263449;
+}
+
+/* Navigation with clear contrast */
+.header {
+    background: rgba(247, 249, 252, 0.97);
+    box-shadow: 0 4px 18px rgba(35, 48, 67, 0.08);
+}
+
+.logo {
+    color: #243247;
+}
+
+.nav-menu a {
+    color: #344256;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #f97316;
+}
+
+.login-btn {
+    border-color: rgba(249, 115, 22, 0.65);
+    color: #243247;
+}
+
+.menu-btn {
+    background: #fff1e7;
+    color: #ea580c;
+}
+
+/* Featured cars and process section */
+.featured-section,
+.how-it-works {
+    background: linear-gradient(135deg, #edf1f5 0%, #e4e9ef 100%);
+}
+
+.car-card {
+    background: #ffffff;
+    border-color: #dce2ea;
+    box-shadow: 0 10px 28px rgba(35, 48, 67, 0.08);
+}
+
+.car-card:hover {
+    border-color: rgba(249, 115, 22, 0.55);
+    box-shadow: 0 18px 40px rgba(35, 48, 67, 0.13);
+}
+
+.car-content,
+.car-title h3,
+.rating {
+    color: #243247;
+}
+
+.car-title p,
+.car-specs,
+.car-specs span,
+.price-row span {
+    color: #68778b;
+}
+
+.car-specs i,
+.car-specs .fa,
+.price-row .price {
+    color: #f97316;
+}
+
+.car-card hr,
+.car-content hr {
+    border-color: #e1e6ed;
+}
+
+/* Section headings and labels */
+.section-heading h2,
+.section-heading h3,
+.section-label,
+.step h3 {
+    color: #243247;
+}
+
+.section-heading p,
+.step p {
+    color: #68778b;
+}
+
+/* Other content sections */
+.why-us {
+    background: #f4f6f9;
+}
+
+.feature-card,
+.review-card {
+    background: #ffffff;
+    border-color: #dce2ea;
+    color: #344256;
+    box-shadow: 0 8px 24px rgba(35, 48, 67, 0.06);
+}
+
+.feature-card h3,
+.review-card h3,
+.customer h4 {
+    color: #243247;
+}
+
+.feature-card p,
+.review-card > p,
+.customer span {
+    color: #68778b;
+}
+
+.reviews-section {
+    background: linear-gradient(145deg, #e9edf2, #f4f6f9);
+}
+
+.step-number {
+    color: rgba(249, 115, 22, 0.20);
+}
+
+/* Booking form and inputs */
+.booking-section {
+    background: #edf1f5;
+    color: #263449;
+}
+
+.booking-box,
+.booking-form input,
+.booking-form select {
+    background: #ffffff;
+    color: #263449;
+    border-color: #dce2ea;
+}
+
+.booking-form input::placeholder {
+    color: #8490a0;
+}
+
+/* Links and interactive controls */
+button,
+.btn,
+.rent-btn,
+.cta-btn {
+    transition: all 0.25s ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #f97316;
+    outline-offset: 3px;
+}
+
+/* Contact section */
+.contact-section {
+    background: #edf1f5;
+    color: #263449;
+}
+
+.contact-container {
+    background: #ffffff;
+    box-shadow: 0 15px 50px rgba(35, 48, 67, 0.10);
+}
+
+.contact-info {
+    background: #34445a;
+    color: #ffffff;
+}
+
+.contact-form-area {
+    background: #ffffff;
+    color: #243247;
+}
+
+.contact-form-area h2,
+.form-group label {
+    color: #243247;
+}
+
+.contact-info h1 {
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: #f8fafc;
+    color: #263449;
+    border-color: #dce2ea;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #8490a0;
+}
+
+/* Keep mobile navigation readable */
+@media (max-width: 768px) {
+    .header {
+        background: #f7f9fc;
+    }
+
+    .menu-btn {
+        border: 1px solid #dce2ea;
+    }
+
+    .nav-menu {
+        background: #ffffff;
+    }
+
+    .nav-menu a {
+        color: #344256;
+    }
+}
+
+/* Why Choose Us cards: subtle orange glow around the edges */
+.why-us .feature-card,
+.why-section .card {
+    border: 1px solid rgba(249, 115, 22, 0.28);
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.10),
+                0 0 2px rgba(249, 115, 22, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.why-us .feature-card:hover,
+.why-section .card:hover {
+    border-color: rgba(249, 115, 22, 0.48);
+    box-shadow: 0 0 16px rgba(249, 115, 22, 0.18),
+                0 8px 24px rgba(249, 115, 22, 0.10);
+}
