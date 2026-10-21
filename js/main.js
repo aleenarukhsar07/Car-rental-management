@@ -391,3 +391,117 @@ if (footerYear) {
 console.log(
     "DriveEase Car Rental System loaded successfully."
 );
+
+
+/* ================= LOGIN POPUP FUNCTIONALITY ================= */
+
+const loginModal = document.getElementById("loginModal");
+const signupModal = document.getElementById("signupModal");
+
+const loginForm = document.getElementById("loginForm");
+const signupForm = document.getElementById("signupForm");
+
+let pendingDestination = "";
+
+function openLogin(destination = "") {
+    pendingDestination = destination;
+    signupModal.classList.remove("show");
+    loginModal.classList.add("show");
+    document.body.classList.add("modal-open");
+}
+
+function openSignup() {
+    loginModal.classList.remove("show");
+    signupModal.classList.add("show");
+    document.body.classList.add("modal-open");
+}
+
+function closeAuth() {
+    loginModal.classList.remove("show");
+    signupModal.classList.remove("show");
+    document.body.classList.remove("modal-open");
+}
+
+function continueAfterLogin() {
+    sessionStorage.setItem("driveEaseLoggedIn", "true");
+
+    const destination = pendingDestination;
+    pendingDestination = "";
+
+    closeAuth();
+
+    if (destination) {
+        window.location.href = destination;
+    } else {
+        alert("Login successful! Welcome to DriveEase.");
+    }
+}
+
+/* Login button and protected links */
+document.addEventListener("click", function (event) {
+    const link = event.target.closest("a");
+
+    if (!link) return;
+
+    const isLoginButton = link.classList.contains("login-btn");
+    const isContactLink = link.getAttribute("href") === "contact.html";
+    const isRentLink = link.getAttribute("href") === "car-details.html";
+    const isProtected = link.hasAttribute("data-auth-required");
+
+    if (!isLoginButton && !isContactLink && !isRentLink && !isProtected) {
+        return;
+    }
+
+    if (sessionStorage.getItem("driveEaseLoggedIn") === "true") {
+        if (isLoginButton) {
+            event.preventDefault();
+            alert("You are already logged in.");
+        }
+        return;
+    }
+
+    event.preventDefault();
+
+    const destination = isLoginButton ? "" : link.getAttribute("href");
+    openLogin(destination);
+});
+
+/* Close buttons */
+document.getElementById("closeLogin").addEventListener("click", closeAuth);
+document.getElementById("closeSignup").addEventListener("click", closeAuth);
+
+/* Switch between login and signup */
+document.getElementById("showSignup").addEventListener("click", openSignup);
+
+document.getElementById("showLogin").addEventListener("click", function () {
+    signupModal.classList.remove("show");
+    loginModal.classList.add("show");
+});
+
+/* Close popup by clicking outside the card */
+[loginModal, signupModal].forEach(function (modal) {
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) closeAuth();
+    });
+});
+
+/* Close popup with Escape key */
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeAuth();
+});
+
+/* Demo login */
+loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    document.getElementById("loginMessage").textContent = "";
+    continueAfterLogin();
+});
+
+/* Demo signup */
+signupForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    document.getElementById("signupMessage").textContent = "";
+    continueAfterLogin();
+});
